@@ -4,6 +4,7 @@
 *.csv
 *.xml
 *.xltx
+*.ofx
 
 build
 dist
