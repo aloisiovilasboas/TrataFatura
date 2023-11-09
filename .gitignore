@@ -2,6 +2,7 @@
 
 *.txt
 *.csv
+*.xml
 
 build
 dist

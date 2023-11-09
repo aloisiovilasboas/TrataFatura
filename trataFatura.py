@@ -29,7 +29,7 @@ def filter_file():
                 if line.strip() == "":
                     if parcelada:
                             parcelada=False
-                elif "SubTotal" in line:
+                elif " Total" in line and not line[0].isdigit() :
                     acabou = True
                 elif "Compras parceladas" in line:
                     parcelada = True
@@ -49,8 +49,10 @@ def filter_file():
                             cidade = line[33:47].strip()
                             pais = line[47:49].strip()
                             valorbrl = line[49:69].strip()
+                            valorbrlLimpo = valorbrl.replace(',','.')
                             valorusd = line[69:81].strip()
-                    my_list.append([date,descricao,parcela,cidade,pais,valorbrl,valorusd])      
+                            valorusdlimpo = valorusd.replace(',','.')
+                    my_list.append([date,descricao,parcela,cidade,pais,valorbrlLimpo,valorusdlimpo])      
             i=i+1
         writer = csv.writer(output_file, lineterminator='\n')
         for row in my_list:

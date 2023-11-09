@@ -1,0 +1,312 @@
+OFXHEADER:100DATA:OFXSGMLVERSION:102SECURITY:NONEENCODING:USASCIICHARSET:1252COMPRESSION:NONEOLDFILEUID:NONENEWFILEUID:NONE<OFX>
+   <SIGNONMSGSRSV1>
+      <SONRS>
+         <STATUS>
+            <CODE>0</CODE>
+            <SEVERITY>INFO</SEVERITY>
+         </STATUS>
+         <DTSERVER>20231109120000[-3:BRT]</DTSERVER>
+         <LANGUAGE>POR</LANGUAGE>
+         <FI>
+            <ORG>Banco do Brasil</ORG>
+            <FID>1</FID>
+         </FI>
+      </SONRS>
+   </SIGNONMSGSRSV1>
+   <BANKMSGSRSV1>
+      <STMTTRNRS>
+         <TRNUID>1</TRNUID>
+         <STATUS>
+            <CODE>0</CODE>
+            <SEVERITY>INFO</SEVERITY>
+         </STATUS>
+         <STMTRS>
+            <CURDEF>BRL</CURDEF>
+            <BANKACCTFROM>
+               <BANKID>1</BANKID>
+               <BRANCHID>1603-9</BRANCHID>
+               <ACCTID>22557-6</ACCTID>
+               <ACCTTYPE>CHECKING</ACCTTYPE>
+            </BANKACCTFROM>
+            <BANKTRANLIST>
+               <DTSTART>20230531120000[-3:BRT]</DTSTART>
+               <DTEND>20230630120000[-3:BRT]</DTEND>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230601120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-40.00</TRNAMT>
+                  <FITID>20230601140000</FITID>
+                  <CHECKNUM>000000060101</CHECKNUM>
+                  <REFNUM>60.101</REFNUM>
+                  <MEMO>Pix - Enviado - 01/06 17:43 Sergio Dias De Melo Filho</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230602120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-418.74</TRNAMT>
+                  <FITID>202306021418740</FITID>
+                  <CHECKNUM>000000060201</CHECKNUM>
+                  <REFNUM>60.201</REFNUM>
+                  <MEMO>Pix - Enviado - 02/06 15:11 Atalaia Racoes</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230605120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-3.00</TRNAMT>
+                  <FITID>2023060513000</FITID>
+                  <CHECKNUM>000000139999</CHECKNUM>
+                  <REFNUM>139.999</REFNUM>
+                  <MEMO>Compra com Cartão - 05/06 11:06 PAG*AgfAugustoFranco</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230605120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-1000.00</TRNAMT>
+                  <FITID>2023060511000000</FITID>
+                  <CHECKNUM>156154373316</CHECKNUM>
+                  <REFNUM>51.156.154.373.316</REFNUM>
+                  <MEMO>Saque no TAA - 05/06 11:56 SOP-AUGUSTO FRANCO</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230605120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-1539.12</TRNAMT>
+                  <FITID>2023060511539120</FITID>
+                  <CHECKNUM>000000060501</CHECKNUM>
+                  <REFNUM>60.501</REFNUM>
+                  <MEMO>Pix - Enviado - 05/06 23:05 Via S A</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230605120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-24.00</TRNAMT>
+                  <FITID>20230605124000</FITID>
+                  <CHECKNUM>561101835864</CHECKNUM>
+                  <REFNUM>881.561.101.835.864</REFNUM>
+                  <MEMO>Tarifa Pacote de Serviços - Cobrança referente 05/06/2023</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230606120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-315.50</TRNAMT>
+                  <FITID>202306061315500</FITID>
+                  <CHECKNUM>000000060601</CHECKNUM>
+                  <REFNUM>60.601</REFNUM>
+                  <MEMO>Pix - Enviado - 06/06 13:40 Paozinho Delicia</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230609120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-7267.63</TRNAMT>
+                  <FITID>2023060917267630</FITID>
+                  <CHECKNUM>000000060901</CHECKNUM>
+                  <REFNUM>60.901</REFNUM>
+                  <MEMO>Pagamento de Boleto - BANCO XP S/A</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230609120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-102.09</TRNAMT>
+                  <FITID>202306091102090</FITID>
+                  <CHECKNUM>000000060902</CHECKNUM>
+                  <REFNUM>60.902</REFNUM>
+                  <MEMO>Pix - Enviado - 08/06 07:24 Wide Pay</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230609120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-133.64</TRNAMT>
+                  <FITID>202306091133640</FITID>
+                  <CHECKNUM>000000060903</CHECKNUM>
+                  <REFNUM>60.903</REFNUM>
+                  <MEMO>Pix - Enviado - 08/06 07:26 Universidade Estacio De Sa</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230609120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-400.00</TRNAMT>
+                  <FITID>202306091400000</FITID>
+                  <CHECKNUM>000000060904</CHECKNUM>
+                  <REFNUM>60.904</REFNUM>
+                  <MEMO>Pix - Enviado - 09/06 14:48 Disraeli Costa Dias</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230612120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>14911.18</TRNAMT>
+                  <FITID>20230612014911180</FITID>
+                  <CHECKNUM>546000023168</CHECKNUM>
+                  <REFNUM>523.546.000.023.168</REFNUM>
+                  <MEMO>Transferência recebida - 12/06 11:39 MARCELO MENEZES V BOAS</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230612120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-203.80</TRNAMT>
+                  <FITID>202306121203800</FITID>
+                  <CHECKNUM>000000061201</CHECKNUM>
+                  <REFNUM>61.201</REFNUM>
+                  <MEMO>Pix - Enviado - 12/06 10:37 Bendito Alimentos</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230612120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-105.00</TRNAMT>
+                  <FITID>202306121105000</FITID>
+                  <CHECKNUM>000000061202</CHECKNUM>
+                  <REFNUM>61.202</REFNUM>
+                  <MEMO>Pix - Enviado - 12/06 19:17 Claudia Santos De Oliveira</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230612120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-487.65</TRNAMT>
+                  <FITID>202306121487650</FITID>
+                  <CHECKNUM>000150125723</CHECKNUM>
+                  <REFNUM>150.125.723</REFNUM>
+                  <MEMO>Pagto cartão crédito - OUROCARD FACIL VISA</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230614120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-120.00</TRNAMT>
+                  <FITID>202306141120000</FITID>
+                  <CHECKNUM>000000061401</CHECKNUM>
+                  <REFNUM>61.401</REFNUM>
+                  <MEMO>Pix - Enviado - 14/06 08:11 Uclesia Conceicao Dos Sant</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230619120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-300.00</TRNAMT>
+                  <FITID>202306191300000</FITID>
+                  <CHECKNUM>000000061901</CHECKNUM>
+                  <REFNUM>61.901</REFNUM>
+                  <MEMO>Pix - Enviado - 18/06 10:58 Nelaine Cardoso Dos Santos</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230620120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-35.00</TRNAMT>
+                  <FITID>20230620135000</FITID>
+                  <CHECKNUM>000000062001</CHECKNUM>
+                  <REFNUM>62.001</REFNUM>
+                  <MEMO>Pix - Enviado - 20/06 18:51 Super Hiper Limpo</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230621120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>79644.50</TRNAMT>
+                  <FITID>20230621079644500</FITID>
+                  <CHECKNUM>000033428758</CHECKNUM>
+                  <REFNUM>33.428.758</REFNUM>
+                  <MEMO>TED-Crédito em Conta - 102 0001    80975534572 ALOISIO DE MEN</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230626120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-82991.00</TRNAMT>
+                  <FITID>20230626182991000</FITID>
+                  <CHECKNUM>111000004328</CHECKNUM>
+                  <REFNUM>605.111.000.004.328</REFNUM>
+                  <MEMO>Transferência enviada - 26/06 15:01 SAMAM VEICULOS LTDA</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230626120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-2930.27</TRNAMT>
+                  <FITID>2023062612930270</FITID>
+                  <CHECKNUM>111000004328</CHECKNUM>
+                  <REFNUM>605.111.000.004.328</REFNUM>
+                  <MEMO>Transferência enviada - 26/06 15:03 SAMAM VEICULOS LTDA</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230626120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-54.73</TRNAMT>
+                  <FITID>20230626154730</FITID>
+                  <CHECKNUM>000000062601</CHECKNUM>
+                  <REFNUM>62.601</REFNUM>
+                  <MEMO>Pix - Enviado - 25/06 23:24 Ifood</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230626120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-5.00</TRNAMT>
+                  <FITID>2023062615000</FITID>
+                  <CHECKNUM>000991912001</CHECKNUM>
+                  <REFNUM>991.912.001</REFNUM>
+                  <MEMO>Tarifa MSG - Mês Anterior - Cobrança referente 12/06/2023</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230628120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-280.00</TRNAMT>
+                  <FITID>202306281280000</FITID>
+                  <CHECKNUM>000000062801</CHECKNUM>
+                  <REFNUM>62.801</REFNUM>
+                  <MEMO>Pix - Enviado - 28/06 12:03 Nathalia Moraes Carvalho B</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230628120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-70.00</TRNAMT>
+                  <FITID>20230628170000</FITID>
+                  <CHECKNUM>000000062802</CHECKNUM>
+                  <REFNUM>62.802</REFNUM>
+                  <MEMO>Pix - Enviado - 28/06 17:25 Camila Guimaraes Pereira</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230628120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-62.00</TRNAMT>
+                  <FITID>20230628162000</FITID>
+                  <CHECKNUM>000000062803</CHECKNUM>
+                  <REFNUM>62.803</REFNUM>
+                  <MEMO>Pix - Enviado - 28/06 17:28 Ana Carolina Souto Muhlert</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230628120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-821.70</TRNAMT>
+                  <FITID>202306281821700</FITID>
+                  <CHECKNUM>000000062804</CHECKNUM>
+                  <REFNUM>62.804</REFNUM>
+                  <MEMO>Pix - Enviado - 28/06 18:05 Jovino Alberto Oliveira Pe</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230630120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-356.49</TRNAMT>
+                  <FITID>202306301356490</FITID>
+                  <CHECKNUM>000000063001</CHECKNUM>
+                  <REFNUM>63.001</REFNUM>
+                  <MEMO>Pix - Enviado - 30/06 13:19 Energisa Sergipe-distrib.</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230630120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-79.03</TRNAMT>
+                  <FITID>20230630179030</FITID>
+                  <CHECKNUM>000000063002</CHECKNUM>
+                  <REFNUM>63.002</REFNUM>
+                  <MEMO>Pgto conta água - Guia Saneam DESO</MEMO>
+               </STMTTRN>
+               <STMTTRN>
+                  <TRNTYPE>OTHER</TRNTYPE>
+                  <DTPOSTED>20230630120000[-3:BRT]</DTPOSTED>
+                  <TRNAMT>-132.50</TRNAMT>
+                  <FITID>202306301132500</FITID>
+                  <CHECKNUM>000000063003</CHECKNUM>
+                  <REFNUM>63.003</REFNUM>
+                  <MEMO>Pix - Enviado - 30/06 17:51 Edimar Cruz Menezes</MEMO>
+               </STMTTRN>
+            </BANKTRANLIST>
+            <LEDGERBAL>
+               <BALAMT>7533.07</BALAMT>
+               <DTASOF>20230630120000[-3:BRT]</DTASOF>
+            </LEDGERBAL>
+         </STMTRS>
+      </STMTTRNRS>
+   </BANKMSGSRSV1>
+</OFX>
