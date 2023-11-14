@@ -5,6 +5,7 @@ import xml.etree.ElementTree as et
 import plotly.express as px
 import os
 import re
+import config 
 
 def converterPastaOFXemXML(caminhoPasta):
     arquivos = [caminhoPasta+'/'+arquivo for arquivo in os.listdir(caminhoPasta) if arquivo.endswith('.ofx') ]
@@ -81,8 +82,8 @@ def lerTodosXMLemPasta(caminhoPasta):
         todasAstransacoes = todasAstransacoes+transacoes
     return todasAstransacoes
 
-files = converterPastaOFXemXML('comprovantes2023/bb/2023')
-todasAsTransacoes = lerTodosXMLemPasta('comprovantes2023/bb/2023')
+files = converterPastaOFXemXML(config.stringFolder)
+todasAsTransacoes = lerTodosXMLemPasta(config.stringFolder)
 df = pd.DataFrame(todasAsTransacoes)
 
 

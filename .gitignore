@@ -6,5 +6,7 @@
 *.xltx
 *.ofx
 
+config.py
+
 build
 dist
