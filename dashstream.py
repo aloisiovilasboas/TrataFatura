@@ -1,12 +1,27 @@
 import streamlit as st
 import pandas as pd
+import re
 import config
-from utils import converterPastaOFXemXML, lerTodosXMLemPasta
+from utils import lerTodosXMLemPasta
 
 # Função para selecionar uma pasta
 def select_folder():
-    folder_path = st.sidebar.file_uploader("Selecione uma pasta", type=None, accept_multiple_files=False, key=None)
-    return folder_path
+    files = st.sidebar.file_uploader("Selecione uma pasta", label_visibility=False, type=None, accept_multiple_files=True, key=None)
+    return files
+
+def converterPastaOFXemXML(caminhoPasta):
+    arquivos = [caminhoPasta+'/'+arquivo for arquivo in os.listdir(caminhoPasta) if arquivo.endswith('.ofx') ]
+    for arquivo in arquivos:
+        conteudo = ler_arquivo(arquivo)
+        arquivoxml = re.sub('ofx$', 'xml', arquivo)
+        conteudo = apagar_primeiras_linhas(conteudo)
+        escrever_em_arquivo(conteudo, arquivoxml)
+     
+        
+
+
+    return arquivos
+
 
 # Layout do app
 st.title('Conta Corrente:')

@@ -8,8 +8,9 @@ import plotly.express as px
 import config 
 from utils import converterPastaOFXemXML, lerTodosXMLemPasta   
 
-files = converterPastaOFXemXML(config.stringFolder)
+arquivos = converterPastaOFXemXML(config.stringFolder)
 todasAsTransacoes = lerTodosXMLemPasta(config.stringFolder)
+
 df = pd.DataFrame(todasAsTransacoes)
 
 
