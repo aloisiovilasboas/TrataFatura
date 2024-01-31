@@ -24,6 +24,33 @@ def apagar_primeiras_linhas(texto, num_linhas=10):
     novo_texto = '\n'.join(linhas[num_linhas:])
     return novo_texto
 
+def limparString(texto):
+    #remove cabeçalho da string até a primeira tag <OFX>
+    texto = re.sub('^.*?<OFX>', '<OFX>', texto, flags=re.DOTALL)
+    return texto
+
+def leTransacoes(xmlroot):
+    transacoes = []
+    for child in xmlroot:
+        if child.tag == "STMTTRN":
+            transacao={}
+            for tagtransacao in child:
+                if tagtransacao.tag=="DTPOSTED":
+                    data_string = tagtransacao.text
+                    # seleciono apenas os 8 primeiros caracteres da string que contém à data
+                    data_string = data_string[:8]
+                    date = pd.to_datetime(data_string, format='%Y%m%d')
+                    transacao.update({'Data Convertida': date.strftime('%d/%m/%Y')}) 
+                else:
+                    if tagtransacao.tag=="TRNAMT":
+                        transacao.update({'Valor Convertido': pd.to_numeric(tagtransacao.text)})
+                transacao.update({tagtransacao.tag: tagtransacao.text})
+            transacoes.append(transacao)
+    return transacoes
+
+    
+
+
 def ler_arquivo(caminho_arquivo):
     try:
         with open(caminho_arquivo, 'r', encoding='ISO-8859-14') as arquivo:
@@ -50,9 +77,12 @@ def transform_xml(xmlroot):
             for tagtransacao in child:
                 if tagtransacao.tag=="DTPOSTED":
                     data_string = tagtransacao.text[:-14]
-                    date = pd.to_datetime(data_string, format='%Y%m%d')
-                    transacao.update({'DataConvertidadt': date}) 
-                    transacao.update({'DataConvertida': date.strftime('%d/%m/%Y')}) 
+                    print(tagtransacao.text)
+                    date = data_string
+                    transacao.update({'DataConvertida': date})
+                    # date = pd.to_datetime(data_string, format='%Y%m%d')
+                    # transacao.update({'DataConvertidadt': date}) 
+                    # transacao.update({'DataConvertida': date.strftime('%d/%m/%Y')}) 
                 else:
                     if tagtransacao.tag=="TRNAMT":
                         transacao.update({'ValorConvertido': pd.to_numeric(tagtransacao.text)})

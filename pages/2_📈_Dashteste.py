@@ -23,7 +23,7 @@ def converterPastaOFXemXML(caminhoPasta):
 
 
 # Layout do app
-st.title('Conta Corrente:')
+st.markdown('Conta Corrente:')
 folder_path = select_folder()
 
 if folder_path:

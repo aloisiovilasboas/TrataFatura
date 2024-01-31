@@ -9,6 +9,6 @@
 config.py
 
 streamlitenv
-
+__pycache__
 build
 dist
