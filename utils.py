@@ -14,9 +14,6 @@ def converterPastaOFXemXML(caminhoPasta):
         conteudo = apagar_primeiras_linhas(conteudo)
         escrever_em_arquivo(conteudo, arquivoxml)
      
-        
-
-
     return arquivos
 
 def apagar_primeiras_linhas(texto, num_linhas=10):
