@@ -2,7 +2,7 @@ import os
 import streamlit as st
 import pandas as pd
 import re
-import config
+
 from utils import lerTodosXMLemPasta, ler_arquivo, apagar_primeiras_linhas, escrever_em_arquivo
 
 # Função para selecionar uma pasta
