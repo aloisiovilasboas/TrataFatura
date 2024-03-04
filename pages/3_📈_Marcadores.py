@@ -1,13 +1,21 @@
 import streamlit as st
 from streamlit_tags import st_tags, st_tags_sidebar
 import pandas as pd
+from streamlit_gsheets import GSheetsConnection
+
+conn = st.connection("gsheets", type=GSheetsConnection)
+
+data = conn.read(worksheet="marcadores")
+st.dataframe(data)
 
 
 # Inicializa o datastream se ele não existir
-if 'filtros' not in st.session_state:
-    st.session_state['filtros'] = []
-if 'marcadoresDosFiltros' not in st.session_state:
-    st.session_state['marcadoresDosFiltros'] = []
+if 'nomesfiltros' not in st.session_state:
+    st.session_state['nomesfiltros'] = []
+if 'termosfiltros' not in st.session_state:
+    st.session_state['termosfiltros'] = []
+if 'marcadoresFiltros' not in st.session_state:
+    st.session_state['marcadoresFiltros'] = []
 
 if 'marcadores' not in st.session_state:
     st.session_state['marcadores'] = []
@@ -20,7 +28,8 @@ with col1:
     with st.form("my_form", clear_on_submit=True):
         st.header("Filtros")
         # Entrada de texto para adicionar uma nova palavra
-        novo_filtro = st.text_input('Insira um novo filtro')
+        novo_termo = st.text_input('Insira o termo a ser filtrado')
+        novo_filtro = st.text_input('Insira o nome do filtro')
         options = st.multiselect(
             'Aplicar marcadores',
             st.session_state['marcadores'],
@@ -30,11 +39,12 @@ with col1:
         
         submitted = st.form_submit_button("Submit")
         if submitted:
-            st.session_state['filtros'].append(novo_filtro)
-            st.session_state['marcadoresDosFiltros'].append(options)
+            st.session_state['nomesfiltros'].append(novo_filtro)
+            st.session_state['termosfiltros'].append(novo_termo)
+            st.session_state['marcadoresFiltros'].append(options)
 # Exibe o datastream atualizado
-    dff = pd.DataFrame({'filtros':st.session_state['filtros'], 'marcadoresDosFiltros':st.session_state['marcadoresDosFiltros']})
-    st.data_editor(dff, hide_index=True, num_rows = 'dynamic', disabled=['filtros', 'marcadoresDosFiltros'])
+    dff = pd.DataFrame({'nomesfiltros':st.session_state['nomesfiltros'], 'termosfiltros':st.session_state['termosfiltros'], 'marcadoresDosFiltros':st.session_state['marcadoresFiltros']})
+    st.data_editor(dff, hide_index=True, num_rows = 'dynamic', key="dff")
 
 
 #CRUD Filtros
@@ -55,6 +65,8 @@ with col2:
 # Exibe o datastream atualizado
     dfm = pd.DataFrame(st.session_state['marcadores'], columns=['nome'])
     st.write(edited_dfm = st.data_editor(dfm, hide_index=True,key="dfm"))
+
+    st.session_state
 
 
 
