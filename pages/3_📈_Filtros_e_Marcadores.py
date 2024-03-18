@@ -52,11 +52,26 @@ if 'marcadoresFiltros' not in st.session_state:
     st.session_state['marcadoresFiltros'] = cleanedmarcadoresFiltros
 
 
-col1, col2 = st.columns(2)
+
+    
 with st.container():
+    col1, col2 = st.columns(2)
+    with col1:
+        st.header("Filtros")
+        filtros = pd.DataFrame({'Nome':st.session_state['nomesFiltros'], 'Termo':st.session_state['termosFiltros'], 'Marcadores':st.session_state['marcadoresFiltros']})
+        st.data_editor(filtros, width=400, hide_index=True , on_change=deletoufiltro,  disabled=('Nome','Termo','Marcadores'), num_rows = 'dynamic', key="filtrosEditor")
+    with col2:
+        st.header("Marcadores")
+    # Exibe o datastream atualizado
+        marcadores = pd.DataFrame(st.session_state['marcadores'], columns=['Nome'])
+        st.data_editor(marcadores, width=400, hide_index=True, on_change=deletoumarcador, disabled=("Nome", "col2"),  num_rows = 'dynamic',key="marcadoresEditor")
+
+
+with st.container():
+    col1, col2 = st.columns(2)
     with col1:
         with st.form("my_form", clear_on_submit=True):
-            st.header("Filtros")
+          #  st.header("Filtros")
             # Entrada de texto para adicionar uma nova palavra
             novo_termo = st.text_input('Insira o termo a ser filtrado')
             novo_filtro = st.text_input('Insira o nome do filtro')
@@ -69,25 +84,15 @@ with st.container():
                 st.session_state['nomesFiltros'].append(novo_filtro)
                 st.session_state['termosFiltros'].append(novo_termo)
                 st.session_state['marcadoresFiltros'].append(options)       
+                st.rerun()
     with col2:
         with st.form("my_formarcadores", clear_on_submit=True):
-            st.header("Marcadores")
+          #  st.header("Marcadores")
             novo_marcador = st.text_input('Insira um novo marcador')
             submitted = st.form_submit_button("Submit")
             if submitted:
                 st.session_state['marcadores'].append(novo_marcador)
-    
-with st.container():
-    col1, col2 = st.columns(2)
-    with col1:
-        st.write("Filtros")
-        filtros = pd.DataFrame({'Nome':st.session_state['nomesFiltros'], 'Termo':st.session_state['termosFiltros'], 'Marcadores':st.session_state['marcadoresFiltros']})
-        st.data_editor(filtros, width=400, hide_index=True , on_change=deletoufiltro,  disabled=('Nome','Termo','Marcadores'), num_rows = 'dynamic', key="filtrosEditor")
-    with col2:
-        st.write("Marcadores")
-    # Exibe o datastream atualizado
-        marcadores = pd.DataFrame(st.session_state['marcadores'], columns=['Nome'])
-        st.data_editor(marcadores, width=400, hide_index=True, on_change=deletoumarcador, disabled=("Nome", "col2"),  num_rows = 'dynamic',key="marcadoresEditor")
+                st.rerun()
 
 with st.container():
     col1, col2, col3 = st.columns(3)
